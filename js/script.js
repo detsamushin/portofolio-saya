@@ -15,44 +15,17 @@ document.addEventListener("click", function (e) {
 });
 
 // animasi project
-const track = document.querySelector(".carousel-track");
-const items = Array.from(track.children);
-const prevButton = document.querySelector(".prev-btn");
-const nextButton = document.querySelector(".next-btn");
 
-let currentIndex = 0;
-
-function updateCarousel() {
-  // Hapus semua class active
-  items.forEach((item, index) => {
-    item.classList.remove("active");
-    if (index === currentIndex) {
-      item.classList.add("active"); // Tambahkan active ke item yang dipilih
-    }
-  });
-
-  // Hitung lebar item dan offset ke tengah
-  const itemWidth = items[0].getBoundingClientRect().width; // Lebar tiap item
-  const carouselWidth = track.offsetWidth; // Lebar total track carousel
-  const offset = carouselWidth / 2 - itemWidth / 2; // Hitung offset untuk tengah
-
-  // Geser track agar item aktif berada di tengah
-  track.style.transform = `translateX(calc(${offset}px - ${
-    currentIndex * itemWidth
-  }px))`;
+function showPopup(title, description) {
+  const popup = document.getElementById("popup");
+  document.getElementById("popup-title").innerText = title;
+  document.getElementById("popup-description").innerText = description;
+  popup.style.display = "flex";
 }
 
-// Tombol sebelumnya
-prevButton.addEventListener("click", () => {
-  currentIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
-  updateCarousel();
-});
-
-// Tombol berikutnya
-nextButton.addEventListener("click", () => {
-  currentIndex = currentIndex === items.length - 1 ? 0 : currentIndex + 1;
-  updateCarousel();
-});
+function hidePopup() {
+  document.getElementById("popup").style.display = "none";
+}
 
 // Inisialisasi awal
 updateCarousel();
