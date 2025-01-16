@@ -208,11 +208,11 @@ body {
 
 .about .row .content p {
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 0.5;
   line-height: 3 rem;
   color: rgb(11, 10, 10);
-  text-align: center;
+  text-align: justify;
 }
 
 /* projects section*/
@@ -268,6 +268,8 @@ body {
 
 .portfolio-item:hover .overlay {
   opacity: 1;
+  color: #ffd000;
+  font-size: medium;
 }
 
 .popup {
@@ -284,7 +286,7 @@ body {
 }
 
 .popup-content {
-  background: #ff0000;
+  background: black;
   padding: 20px;
   border-radius: 10px;
   text-align: left;
@@ -454,7 +456,7 @@ footer .credit a {
   }
 
   .navbar .navbar-nav a {
-    color: var(--bg);
+    color: #222;
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
