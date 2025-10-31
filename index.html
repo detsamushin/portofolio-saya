@@ -1,212 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" className="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Saya</title>
 
-    <!-- font -->
+    <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- bootstrap icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-
-    <!-- my style -->
-    <link rel="stylesheet" href="css/style.css" />
+    <title>portofolio tama</title>
   </head>
-
-  <body>
-    <!-- navbar start -->
-    <nav class="navbar">
-      <a href="#" class="navbar-logo"><span>Tama</span>Porto.</a>
-
-      <div class="navbar-nav">
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#project">My Project</a>
-        <a href="#contact">Contact Me</a>
-      </div>
-
-      <div class="navbar-extra">
-        <a href="#" class="bi bi-list"></a>
-      </div>
-    </nav>
-    <!-- navbar end -->
-
-    <!-- Hero Section start -->
-    <section class="hero" id="home">
-      <main class="content">
-        <h1>Here Are My<span>Projects</span></h1>
-        <p>
-          Welcome to my portfolio. Explore my work and feel free to reach out if
-          you're interested in collaborating or discussing your project needs.
-        </p>
-        <a href="#contact" class="cta">Start Your Project</a>
-      </main>
-    </section>
-    <!-- Hero Section end -->
-
-    <!-- about section start -->
-    <section id="about" class="about">
-      <h2><span>About Me</span></h2>
-
-      <div class="row">
-        <div class="about-img">
-          <img src="img/aboutme.jpg" alt="About Me" />
-        </div>
-        <div class="content">
-          <h3>Why choose me?</h3>
-          <p>
-            With a passion for creative design and a strong background in
-            Computer and Network Engineering, I bring unique solutions to every
-            project. My expertise spans graphic design, web development, and
-            branding, ensuring each project stands out with innovation and
-            precision. Whether it's crafting compelling visuals, designing
-            seamless user interfaces, or delivering impactful marketing
-            strategies.
-          </p>
-          <p>
-            I am committed to helping you achieve your goals effectively. Let's
-            turn your ideas into reality!
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- about section end -->
-
-    <!-- project section start -->
-    <section id="project" class="project">
-      <h2><span>MY PROJECT</span></h2>
-      <p class="subtitle">this is my arts.</p>
-      <div class="portfolio-grid">
-        <div
-          class="portfolio-item"
-          onclick="showPopup('Trapped in Repetition', 'T-Shirt Design Illustration.')"
-        >
-          <img src="img/project1.png" alt="Design 1" />
-          <div class="overlay">T-Shirt Design</div>
-        </div>
-        <div
-          class="portfolio-item"
-          onclick="showPopup('Stay Bold Stay Wild', 'T-Shirt Design Illustration.')"
-        >
-          <img src="img/project2.png" alt="Design 2" />
-          <div class="overlay">T-Shirt Design</div>
-        </div>
-        <div
-          class="portfolio-item"
-          onclick="showPopup('Melting Spell', 'T-Shirt Design Illustration.')"
-        >
-          <img src="img/project3.png" alt="Design 3" />
-          <div class="overlay">T-Shirt Design</div>
-        </div>
-      </div>
-    </section>
-
-    <div class="popup" id="popup">
-      <div class="popup-content">
-        <span class="close" onclick="hidePopup()">&times;</span>
-        <h3 id="popup-title"></h3>
-        <p id="popup-description"></p>
-      </div>
-    </div>
-    <!-- project section end -->
-
-    <!-- contact section start -->
-    <section id="contact" class="contact">
-      <h2><span>Contact</span> Me</h2>
-      <div class="container">
-        <form id="contactForm" class="contact-form">
-          <div class="form-group">
-            <label for="name"><i class="bi bi-person"></i> Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="form-control"
-              placeholder="Your Name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email"><i class="bi bi-envelope"></i> Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="form-control"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="contact"><i class="bi bi-telephone"></i> Contact</label>
-            <input
-              type="tel"
-              id="contact"
-              name="contact"
-              class="form-control"
-              placeholder="Your Phone Number"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="message"><i class="bi bi-chat-dots"></i> Message</label>
-            <textarea
-              id="message"
-              name="message"
-              class="form-control"
-              rows="5"
-              placeholder="Your Message"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100 mt-3" href="#home">
-            <i class="bi bi-send"></i> Send Message
-          </button>
-        </form>
-      </div>
-    </section>
-    <!-- contact section end -->
-    <div class="wrapper">
-      <footer>
-        <div class="socials">
-          <a
-            href="https://www.instagram.com/tsatriatmaa"
-            class="bi bi-instagram"
-            target="_blank"
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/aditya-satria-utama-a54469323/"
-            class="bi bi-linkedin"
-            target="_blank"
-          ></a>
-        </div>
-
-        <div class="links">
-          <a href="#home">Home</a>
-          <a href="#about">About Me</a>
-          <a href="#project">My Project</a>
-          <a href="#contact">Contact Me</a>
-        </div>
-
-        <div class="credit">
-          <p>Created by <a href="">Satria Utama</a>. | &copy; 2024</p>
-        </div>
-      </footer>
-    </div>
-    <!-- footer start -->
-
-    <!-- footer end -->
-    <!-- javascript -->
-    <script src="js/script.js"></script>
+  <body class="bg-zinc-900 text-white" id="home">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
